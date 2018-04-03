@@ -1,0 +1,1 @@
+/Users/ecarli/.bash_profile
