@@ -4,8 +4,12 @@ alias go="cd ~/code"
 alias gs="git status"
 alias gcam="git commit -a -m"
 alias sbp="source ~/.bash_profile"
+alias grepri="grep -r -i"
 
 source /Users/ecarli/code/.files/.git-completion.bash
+
+#Show file path before $ prompt
+export PS1='\u@\H:\w$ '
 
 ##### NVM #####
 export NVM_DIR="$HOME/.nvm"
