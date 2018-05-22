@@ -6,7 +6,7 @@ alias gcam="git commit -a -m"
 alias sbp="source ~/.bash_profile"
 alias grepri="grep -r -i"
 
-source /Users/ecarli/code/.files/.git-completion.bash
+source "/Users/$(whoami)/code/.files/.git-completion.bash"
 
 #Show file path before $ prompt
 export PS1='\u@\H:\w$ '
