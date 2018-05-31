@@ -4,7 +4,7 @@ alias go="cd ~/code"
 alias gs="git status"
 alias gcam="git commit -a -m"
 alias sbp="source ~/.bash_profile"
-alias grepri="grep -r -i"
+alias ackri="ack -r -i"
 
 source "/Users/$(whoami)/code/.files/.git-completion.bash"
 
