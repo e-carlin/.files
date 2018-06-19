@@ -1,10 +1,13 @@
 alias ll="ls -l"
 alias la="ls -all"
 alias go="cd ~/code"
-alias gs="git status"
-alias gcam="git commit -a -m"
 alias sbp="source ~/.bash_profile"
 alias ackri="ack -r -i"
+
+##### Git #####
+alias gs="git status"
+alias gcam="git commit -a -m"
+alias gp="git push"
 
 source "/Users/$(whoami)/code/.files/.git-completion.bash"
 
