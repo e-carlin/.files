@@ -10,16 +10,22 @@ Here is where I am going to keep notes on learning vim
   `$ Ctl+y`
 - Move forward word \
   `$ w`
+- move to end of word \
+  `$ e`
 - Move backward word \
   `$ b`
 - delete word\
   `$ dw`
 - delete word back \
   `$ db`
+- delete word to end \
+  `$ de`
 - delete line \
   `$ dd`
 - undo \
   `$ u`
+- redo \
+  `$ ctl + r`
 
 ## My vscode vim settings
 
