@@ -26,6 +26,10 @@ Here is where I am going to keep notes on learning vim
   `$ u`
 - redo \
   `$ ctl + r`
+- delete all in quote \
+  `$ da"`
+- delete all in between quotes \
+  `$ di"`
 
 ## My vscode vim settings
 
