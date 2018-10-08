@@ -45,5 +45,6 @@ Here is where I am going to keep notes on learning vim
   },
   "vim.handleKeys": {
     "<C-n>": false
-  }
+  },
+  "vim.useSystemClipboard": "true"
 ```
