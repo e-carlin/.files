@@ -38,5 +38,8 @@ Here is where I am going to keep notes on learning vim
   ],
   "[markdown]": {
     "editor.quickSuggestions": true
+  },
+  "vim.handleKeys": {
+    "<C-n>": false
   }
 ```
