@@ -30,6 +30,12 @@ Here is where I am going to keep notes on learning vim
   `$ da"`
 - delete all in between quotes \
   `$ di"`
+- comment multiple lines
+  `$ ctl + v` \
+  `$ move cursor around text you want` \
+  `$ shift + i` \
+  `$ type desired text`
+  `$ leave insert mode and watch text appear`
 
 ## My vscode vim settings
 
