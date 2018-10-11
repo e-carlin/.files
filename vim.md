@@ -30,12 +30,20 @@ Here is where I am going to keep notes on learning vim
   `$ da"`
 - delete all in between quotes \
   `$ di"`
-- comment multiple lines
+- comment multiple lines \
   `$ ctl + v` \
   `$ move cursor around text you want` \
   `$ shift + i` \
   `$ type desired text`
   `$ leave insert mode and watch text appear`
+- search for text \
+  `$ /text-to-search-for` \
+  `$ n # move forward in search` \
+  `$ N # move backward in search`
+- show text in clipboard (registers) \
+  `$ :reg`
+- paste text from numbered clipboard (register) \
+  `$ "<number-from-reg>p`
 
 ## My vscode vim settings
 
