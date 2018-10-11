@@ -45,6 +45,8 @@ Here is where I am going to keep notes on learning vim \
   `$ :reg`
 - paste text from numbered clipboard (register) \
   `$ "<number-from-reg>p`
+- delete til the end of the line \
+  `$ D`
 
 ## My vscode vim settings
 
