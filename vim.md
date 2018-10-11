@@ -1,7 +1,8 @@
 # Learn vim
 
-Here is where I am going to keep notes on learning vim
-
+Here is where I am going to keep notes on learning vim \
+\
+[Another good cheat sheet](http://tnerual.eriogerg.free.fr/vimqrc.html)
 - Enter normal mode (this is a custom mapping)\
   `$ jj`
 - Scroll up \
