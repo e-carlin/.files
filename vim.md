@@ -47,6 +47,12 @@ Here is where I am going to keep notes on learning vim \
   `$ "<number-from-reg>p`
 - delete til the end of the line \
   `$ D`
+- delete file \
+`$ dG `
+- start of line \
+`$ 0 `
+- end of line \
+`$ :%s/foo/bar/g #replaces foo w/ bar globally`
 
 ## My vscode vim settings
 
