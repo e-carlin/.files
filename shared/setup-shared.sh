@@ -5,11 +5,11 @@ source "${HOME}/code/.files/shared/constants.sh"
 symlink_dot_file() {
     TARGET_PATH="${HOME}/$2"
     SOURCE_PATH="${DOT_FILES_BASE}/$1/$2"
-    if ! [[ -a "${SOURCE_PATH}" ]]; then
+    if [[ ! -a "${SOURCE_PATH}" ]]; then
         echo "Trying to symlink a non-existent file ${SOURCE_PATH}"
         exit 1
     fi
-    if ! [[ -L  "${TARGET_PATH}" ]]; then
+    if  [[ ! -L  "${TARGET_PATH}" ]]; then
         echo "Creating symlink to dotfile ${SOURCE_PATH}"
         ln -s "${SOURCE_PATH}" "${TARGET_PATH}"
         return
@@ -19,6 +19,17 @@ symlink_dot_file() {
 
 symlink_dot_file "shared" ".vimrc"
 symlink_dot_file "shared" ".tmux.conf"
+
+# Install vim vundle
+VUNDLE_TARGET_DIR=~/.vim/bundle/Vundle.vim
+if [[ ! -d "${VUNDLE_TARGET_DIR}" ]]; then
+    echo "Installing vim vundle"
+    git clone https://github.com/VundleVim/Vundle.vim.git ${VUNDLE_TARGET_DIR} 
+else
+    echo "Vim vundle already install skipping install"
+fi
+echo "Installing vundle plugins"
+vim +PluginInstall +qall
 
 # TODO: Determine if we are darwin or linux
 # Just doing darwin for now
