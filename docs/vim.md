@@ -47,6 +47,10 @@ Here is where I am going to keep notes on learning vim \
   `$ "<number-from-reg>p`
 - delete til the end of the line \
   `$ D`
+- delete til character \
+  `$ dt<character>`
+- delete til character inclusive \
+  `$ df<character>`
 - delete file \
 `$ dG `
 - start of line \
