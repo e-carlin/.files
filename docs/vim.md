@@ -57,6 +57,12 @@ Here is where I am going to keep notes on learning vim \
 `$ 0 `
 - end of line \
 `$ :%s/foo/bar/g #replaces foo w/ bar globally`
+- indent line \
+  `$ >>`
+- indent multiple lines \
+  `$ V` \
+  `highlight desired lines by moving around` \
+  `$ >>`
 
 ## My vscode vim settings
 

@@ -1,4 +1,3 @@
-
 - List connected devices \
 `$ xinput list`
 
