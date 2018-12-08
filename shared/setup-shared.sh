@@ -5,9 +5,14 @@ source "${HOME}/code/.files/shared/constants.sh"
 symlink_dot_file() {
     TARGET_PATH="${HOME}/$2"
     SOURCE_PATH="${DOT_FILES_BASE}/$1/$2"
+    echo $TARGET_PATH
     if [[ ! -a "${SOURCE_PATH}" ]]; then
         echo "Trying to symlink a non-existent file ${SOURCE_PATH}"
         exit 1
+    fi
+    if [[ -f "${TARGET_PATH}" && ! -L "${TARGET_PATH}" ]]; then
+        echo "File ${TARGET_PATH} already exists and is not a symbolic link. Moving to ${TARGET_PATH}.bak"
+        mv "${TARGET_PATH}" "${TARGET_PATH}.bak"
     fi
     if  [[ ! -L  "${TARGET_PATH}" ]]; then
         echo "Creating symlink to dotfile ${SOURCE_PATH}"
@@ -16,6 +21,8 @@ symlink_dot_file() {
     fi
     echo "Skipping symlink for dotfile ${SOURCE_PATH}. It already exists"
 }
+
+export -f symlink_dot_file
 
 symlink_dot_file "shared" ".vimrc"
 symlink_dot_file "shared" ".tmux.conf"
