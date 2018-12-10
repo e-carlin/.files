@@ -1,6 +1,6 @@
 set -eou pipefail
 
-echo "Setting up mac env"
+echo "Setting up Mac env"
 
 symlink_dot_file "mac" ".bash_profile"
 

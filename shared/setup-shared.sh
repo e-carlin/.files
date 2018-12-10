@@ -38,6 +38,17 @@ fi
 echo "Installing vundle plugins"
 vim +PluginInstall +qall
 
-# TODO: Determine if we are darwin or linux
-# Just doing darwin for now
-bash "${DOT_FILES_BASE}/mac/setup-mac.sh"
+
+# Do OS specific install
+OS="$(uname -a | cut -d ' ' -f1)"
+if [[ "${OS}" = "Linux" ]]; then
+    echo "Linux OS identified. Proceeding with Linux specific setup"
+    bash "${DOT_FILES_BASE}/linux/setup-linux.sh"
+    
+elif [[ "${OS}" = "Darwin" ]]; then
+    echo "Darwin OS identified. Proceeding with Darwin specific setup"
+    bash "${DOT_FILES_BASE}/mac/setup-mac.sh"
+else
+    "Operating system ${OS} is unsupported. Exiting..."
+    exit 1
+fi
