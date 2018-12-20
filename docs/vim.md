@@ -47,6 +47,8 @@ Here is where I am going to keep notes on learning vim \
   `$ "<number-from-reg>p`
 - delete til the end of the line \
   `$ D`
+- delete to start of the line \
+  `$ d^`
 - delete til character \
   `$ dt<character>`
 - delete til character inclusive \
@@ -63,6 +65,11 @@ Here is where I am going to keep notes on learning vim \
   `$ V` \
   `highlight desired lines by moving around` \
   `$ >>`
+- set/move to mark \
+  `$ m<lower-case-letter> #Sets a mark` \
+  ````$ `<letter> # Moves to the mark````
+- re-highlight an area \
+  `$ gv`
 
 ## My vscode vim settings
 
