@@ -70,6 +70,11 @@ Here is where I am going to keep notes on learning vim \
   ````$ `<letter> # Moves to the mark````
 - re-highlight an area \
   `$ gv`
+- join lines together on one line \
+  `Highlight desired lines` \
+  `$ J`
+
+
 
 ## My vscode vim settings
 
