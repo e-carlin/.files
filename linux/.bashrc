@@ -2,7 +2,9 @@
 source "${HOME}/code/.files/shared/constants.sh"
 
 # Completes some Git commands / branch names
-source "${DOT_FILES_BASE}/shared/.git-completion.bash"
+# TODO: Figure out where this lives on linux
+#       It seems for debian there is a git-completion package
+# source "${DOT_FILES_BASE}/shared/.git-completion.bash"
 
 # Pulls in my aliases
 source "${DOT_FILES_BASE}/shared/.bash_aliases"

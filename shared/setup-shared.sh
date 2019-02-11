@@ -26,6 +26,7 @@ export -f symlink_dot_file
 
 symlink_dot_file "shared" ".vimrc"
 symlink_dot_file "shared" ".tmux.conf"
+symlink_dot_file "shared" ".inputrc"
 
 # Install vim vundle
 VUNDLE_TARGET_DIR=~/.vim/bundle/Vundle.vim
