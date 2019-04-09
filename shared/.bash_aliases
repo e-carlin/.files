@@ -1,6 +1,5 @@
 alias ll="ls -l"
 alias la="ls -all"
-alias go="cd ~/code"
 alias sbp="source ~/.bash_profile"
 alias ackri="ack -r -i"
 alias gs="git status"
