@@ -20,22 +20,8 @@ Here is where I am going to keep notes on learning vscode
   "files.trimTrailingWhitespace": true,
   "update.channel": "none",
 "typescript.preferences.quoteStyle": "single",
-  "typescript.tsdk": "/google/src/head/depot/google3/third_party/javascript/node_modules/typescript/stable/lib",
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "[typescript]": {
-    "editor.formatOnSave": true
-  },
-  "tslint.configFile": "/google/data/ro/teams/typescript/tslint/node_modules/google.tslint.json",
-  "tslint.nodePath": "/google/data/ro/teams/typescript/tslint/node_modules",
-
-  "clang-format.fallbackStyle": "google",
-  "python.linting.pylintPath": "/usr/bin/gpylint",
-  "files.associations": {
-    "BUILD": "bazel",
-    "METADATA": "bazel",
-    "WORKSPACE": "bazel"
-  },
-  "[bazel]": {
     "editor.formatOnSave": true
   },
   "window.zoomLevel": 1,
