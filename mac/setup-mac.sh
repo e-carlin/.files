@@ -3,6 +3,7 @@ set -eou pipefail
 echo "Setting up Mac env"
 
 symlink_dot_file "mac" ".bash_profile"
+symlink_dot_file "mac" ".bashrc"
 
 # Enable hold down key to repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
