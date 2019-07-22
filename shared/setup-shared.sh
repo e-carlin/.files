@@ -27,17 +27,7 @@ export -f symlink_dot_file
 symlink_dot_file "shared" ".vimrc"
 symlink_dot_file "shared" ".tmux.conf"
 symlink_dot_file "shared" ".inputrc"
-
-# Install vim vundle
-VUNDLE_TARGET_DIR=~/.vim/bundle/Vundle.vim
-if [[ ! -d "${VUNDLE_TARGET_DIR}" ]]; then
-    echo "Installing vim vundle"
-    git clone https://github.com/VundleVim/Vundle.vim.git ${VUNDLE_TARGET_DIR}
-else
-    echo "Vim vundle already install skipping install"
-fi
-echo "Installing vundle plugins"
-vim +PluginInstall +qall
+symlink_dot_file "shared" ".vim"
 
 # Create ~/bin to put my specific scripts in
 mkdir -p "$HOME/bin"
