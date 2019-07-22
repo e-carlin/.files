@@ -19,3 +19,8 @@ Sets up my environment . files. I setup my environments the same on all machines
 1. cd ~/code
 1. git clone https://github.com/e-carlin/.files.git
 1. ./.files/shared/setup-shared.sh
+
+
+#TODO:
+- find way to manage packages
+	- brew install the_silver_searcher

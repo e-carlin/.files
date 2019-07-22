@@ -39,8 +39,11 @@ set hlsearch
 " key to remove search highlighting
 nmap \q :nohlsearch<CR>
 
+" Wrap and show text after 80 chars
+set textwidth=80
+
 " add line at 80 chars
-:set colorcolumn=72
+au BufNewFile,BufRead *.md setlocal colorcolumn=81
 
 " more natural pane splitting
 set splitbelow
