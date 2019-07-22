@@ -32,20 +32,22 @@ symlink_dot_file "shared" ".inputrc"
 VUNDLE_TARGET_DIR=~/.vim/bundle/Vundle.vim
 if [[ ! -d "${VUNDLE_TARGET_DIR}" ]]; then
     echo "Installing vim vundle"
-    git clone https://github.com/VundleVim/Vundle.vim.git ${VUNDLE_TARGET_DIR} 
+    git clone https://github.com/VundleVim/Vundle.vim.git ${VUNDLE_TARGET_DIR}
 else
     echo "Vim vundle already install skipping install"
 fi
 echo "Installing vundle plugins"
 vim +PluginInstall +qall
 
+# Create ~/bin to put my specific scripts in
+mkdir -p "$HOME/bin"
 
 # Do OS specific install
 OS="$(uname -a | cut -d ' ' -f1)"
 if [[ "${OS}" = "Linux" ]]; then
     echo "Linux OS identified. Proceeding with Linux specific setup"
     bash "${DOT_FILES_BASE}/linux/setup-linux.sh"
-    
+
 elif [[ "${OS}" = "Darwin" ]]; then
     echo "Darwin OS identified. Proceeding with Darwin specific setup"
     bash "${DOT_FILES_BASE}/mac/setup-mac.sh"
