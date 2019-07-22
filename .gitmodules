@@ -1,3 +1,0 @@
-[submodule "shared/.vim/pack/e-carlin/opt/ctrlp.vim"]
-	path = shared/.vim/pack/e-carlin/opt/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
