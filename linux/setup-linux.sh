@@ -3,7 +3,7 @@ set -eou pipefail
 echo "Setting up Linux env"
 
 # Add sourcing of custom .bashrc to existing .bashrc
-if grep -xq "source $HOME\/code\/\.files\/linux\/\.bashrc" ~/.bashrc
+if grep -xq "source $HOME\/code\/\dotfiles\/linux\/\.bashrc" ~/.bashrc
 then
     echo "Sourcing of my custom .bashrc already present in system .bashrc. Not adding."
 else

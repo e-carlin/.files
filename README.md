@@ -2,7 +2,7 @@
 
 Sets up my environment . files. I setup my environments the same on all machines so these files assume the same structure.
 
-## Abbreviated Description of my .files
+## Abbreviated Description of my dotfiles
 
 - .bash_aliases
   - General aliases to reduce typing. Reading the file describes all.
@@ -17,8 +17,8 @@ Sets up my environment . files. I setup my environments the same on all machines
 
 1. mkdir ~/code
 1. cd ~/code
-1. git clone https://github.com/e-carlin/.files.git
-1. ./.files/shared/setup-shared.sh
+1. git clone https://github.com/e-carlin/dotfiles.git
+1. ./dotfiles/shared/setup-shared.sh
 
 
 #TODO:

@@ -1,0 +1,16 @@
+{
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.handleKeys": {
+      "<C-n>": false,
+      "<C-f>": false,
+      "<C-c": false,
+      "<C-w>": false,
+    },
+    "sync.gist": "ca95ad8e1e125d1524dff4416c0c2573"
+}

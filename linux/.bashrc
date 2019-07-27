@@ -1,5 +1,5 @@
 # Constants
-source "${HOME}/code/.files/shared/constants.sh"
+source "${HOME}/code/dotfiles/shared/constants.sh"
 
 # Completes some Git commands / branch names
 # TODO: Figure out where this lives on linux

@@ -1,6 +1,6 @@
 set -eou pipefail
 
-source "${HOME}/code/.files/shared/constants.sh"
+source "${HOME}/code/dotfiles/shared/constants.sh"
 
 symlink_dot_file() {
     TARGET_PATH="${HOME}/$2"
