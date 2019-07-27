@@ -5,6 +5,9 @@ echo "Setting up Mac env"
 symlink_dot_file "mac" ".bash_profile"
 symlink_dot_file "mac" ".bashrc"
 
+# TODO(ecarlin): Switch ctrl and alt modifier keys
+# https://apple.stackexchange.com/questions/13598/updating-modifier-key-mappings-through-defaults-command-tool
+
 # Enable hold down key to repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -12,22 +15,13 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write com.apple.finder AppleShowAllFiles YES
 
 # Install homebrew
-if ! command -v brew 2>/dev/null; then
-    echo "Brew not found. Installing...";
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+command -v brew >/dev/null 2>&1  ||  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install ack (a faster grep)
-if ! command -v ack  2>/dev/null; then
-    echo "ack not found. Installing...";
-    brew  install ack
-fi
+command -v ack >/dev/null 2>&1 || brew install ack
 
 # Install VS Code
-if ! command -v code 2>/dev/null; then
-    echo "VS Code not found. Installing...";
-    brew cask install visual-studio-code
-fi
+command -v code 2>/dev/null ||  brew cask install visual-studio-code
 
 # Symlink vscode settings
 VSCODE_BASE="${DOT_FILES_BASE}/shared/VSCode"
@@ -52,13 +46,13 @@ INSTALLED_VSCODE_EXTENSIONS="$(code --list-extensions | sort)"
 VSCODE_EXTENSIONS_TO_UNINSTALL="$(echo $(diff --unchanged-line-format= --old-line-format= --new-line-format='%L' <(echo "$DESIRED_VSCODE_EXTENSIONS") <(echo "$INSTALLED_VSCODE_EXTENSIONS")) | sort)"
 VSCODE_EXTENSIONS_TO_INSTALL="$(diff --unchanged-line-format= --old-line-format= --new-line-format='%L' <(echo "$INSTALLED_VSCODE_EXTENSIONS") <(echo "$DESIRED_VSCODE_EXTENSIONS"))"
 
-echo "Uinstalling VSCode extesnions: ${VSCODE_EXTENSIONS_TO_UNINSTALL}"
+[[ ! -z "$VSCODE_EXTENSIONS_TO_UNINSTALL" ]] && echo "Uinstalling VSCode extesnions: ${VSCODE_EXTENSIONS_TO_UNINSTALL}"
 for extension in $VSCODE_EXTENSIONS_TO_UNINSTALL
 do
    code --uninstall-extension "${extension}"
 done
 
-echo "Installing VSCode extesnions: ${VSCODE_EXTENSIONS_TO_INSTALL}"
+[[ ! -z "$VSCODE_EXTENSIONS_TO_INSTALL" ]] && echo "Installing VSCode extesnions: ${VSCODE_EXTENSIONS_TO_INSTALL}"
 for extension in $VSCODE_EXTENSIONS_TO_INSTALL
 do
    code --install-extension "${extension}"

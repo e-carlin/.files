@@ -12,5 +12,5 @@
       "<C-c": false,
       "<C-w>": false,
     },
-    "sync.gist": "ca95ad8e1e125d1524dff4416c0c2573"
+    "editor.rulers": [80]
 }
