@@ -1,4 +1,4 @@
-set -ou pipefail # No set -e
+set -ou pipefail # No set -e. I believe the read below fails with it
 
 echo "Setting up Mac env"
 
