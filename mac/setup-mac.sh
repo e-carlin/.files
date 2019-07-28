@@ -5,12 +5,21 @@ symlink_with_bak "$DOT_FILES_BASE/shared/.bashrc" "$HOME/.bashrc"
 
 # TODO(ecarlin): Switch ctrl and alt modifier keys
 # https://apple.stackexchange.com/questions/13598/updating-modifier-key-mappings-through-defaults-command-tool
-
-# Enable hold down key to repeat
+# Keyboard - enable hold down key to repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-# Show hidden files (not so hidden after all)
+# Keyboard - set a blazingly fast key repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# Finder - how all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Finder - show hidden files (not so hidden after all)
 defaults write com.apple.finder AppleShowAllFiles YES
+# Finder - show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+# Finder - when performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# OS - disable resume system-wide
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 # Install homebrew
 install_if_command_not_found "brew" "/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)""
